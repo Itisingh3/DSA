@@ -1,10 +1,9 @@
 /*
 
     A
-   ABC
-  ABCDC
- ABCDEDC
-ABCDEFEDC
+   ABA
+  ABCBA
+ ABCDCBA
 
 */
 
@@ -17,17 +16,21 @@ int main(){
     int n;
     cout<<"Enter the value of n: ";
     cin>>n;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<(n-i-1);j++){
+    for(int i=1;i<=n;i++){
+        for(int space=1;space<=(n-i);space++){
             cout<<" ";
         }
         char ch='A';
-        int point=(2*i+1)/2;
-        for(int j=0;j<(2*i+1);j++){
+        for(int j=1;j<=i;j++){
             cout<<ch;
-            if(j<=point)ch++;
-            else ch--;
+            ch++;
+        }
+        ch--;
+        for(int j=1;j<i;j++){
+            ch--;
+            cout<<ch;
         }
         cout<<endl;
     }
+    return 0;
 }
