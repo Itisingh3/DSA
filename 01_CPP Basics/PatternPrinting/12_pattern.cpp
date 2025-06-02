@@ -19,7 +19,7 @@ int main(){
         for(int j=1;j<=i;j++){
             cout<<j;
         }
-        for(int space=i;space<=2*(n-1);i++){
+        for(int space=1;space<=spaces;space++){
             cout<<" ";
         }
         for(int j=i;j>=1;j--){
